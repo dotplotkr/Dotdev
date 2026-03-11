@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# 환경변수 / 비밀정보
+.env
+.env.local
+.env.*.local
+
+# 에디터
+.vscode/
+.idea/
+
+# 로그
+*.log
