@@ -1,0 +1,1436 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+HK:wght@200..900&display=swap');
+
+
+@import url("https://use.typekit.net/ipm5esh.css");
+
+/* Nomalize */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+body, div, div{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+h1{
+  font-size:4em;
+}
+
+h2{
+  font-size:2em;
+}
+
+h3{
+  font-size:1em;
+}
+
+/* End Nomalize */
+
+
+
+
+
+
+/* Lib */
+.title{
+  margin:0;
+  font-family: "aktiv-grotesk", sans-serif;
+  font-size: 3rem;
+  font-weight:bold;
+  color:#b9b9b9;
+}
+
+.subtitle{
+  margin:2px;
+  font-family: 'avalon';
+  font-weight: 100;
+  font-size: 1rem;
+  color:#b9b9b9;
+}
+/* End Lib */
+
+
+
+
+
+
+
+/* Custom */
+ 
+
+
+
+
+
+html{
+  background-color:black;
+}
+
+
+
+
+
+
+/* Scrollbar start */
+html{
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width:0px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #FF0000;
+}
+/* Scrollbar end */
+
+
+
+
+
+
+   /* Cursor */
+   * {
+    cursor:none;
+}
+
+.cursor {
+    top:-300px;
+    left:-300px;
+    position:fixed;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background-color:white;
+    mix-blend-mode:difference;
+    pointer-events:none;
+    transform:translateX(-50%) translateY(-50%);
+    z-index:200;
+    transition:width .1s, height .1s, background-color 1s;
+  }
+
+
+  .need-to-cursor-big{
+    width:50px;
+    height:50px;
+  }
+
+  @media screen and (max-width:1000px){
+    *{
+      cursor:auto;
+    }
+    .cursor {
+      display:none;
+    }
+      
+      .need-to-cursor-big{
+        display:none;
+    }
+  }
+
+  /* End Cursor */
+
+
+
+
+
+
+  /* Loader */
+  .progress{
+    background-color:  #0d0d0d;
+    color: #e9e9e9;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index:300;
+  }
+  
+  .progress-text{
+    font-family: "aktiv-grotesk", sans-serif;
+    font-size:15px;
+    position: absolute;
+    z-index:300;
+    color:#e9e9e9;
+    top:50%;
+    left:5%;
+  }
+  
+  .progress-bar{
+    position: absolute;
+    background-color: #E8642B;
+    top:52.5%;
+    left:5%;
+    width:190px;
+    height:3px;
+  }
+
+
+  /* End Loader */
+
+
+
+
+
+   /* Header */
+   .header{
+    position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    width:100vw;
+    height:100px;
+    z-index: 101;
+    padding:0 30px;
+    }
+      
+    .header-logobox{
+      z-index: 300;
+    }
+
+    .header-logobox > a{
+      
+      color:white;
+      vertical-align: middle;
+      padding:3px;
+      z-index: 300;
+
+      display:flex;
+      align-items: center;
+      
+    }
+
+    .header-logobox > a > img{
+      
+      width:90px;
+    }
+ 
+
+  .header-menubox{
+    display:flex;
+      
+    justify-content: space-between;
+    align-items:center;
+    height:30px;
+    width:80px;
+    position: relative;
+    z-index: 201;
+
+  }
+
+  .header-menu-en{
+    display:flex;
+    
+    align-items: center;
+    height:30px;
+
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 600;
+    font-size:1rem;
+    color:#f2f0f0;
+    
+    transition: .3s;
+  }
+
+  .header-menubox:hover > .header-menu-en{
+    font-size:1.3rem;
+    
+    transition: .5s;
+  }
+
+  .header-menu-dot{
+    display:flex;
+    
+    justify-content: space-around;
+    align-items:center;
+    height:30px;
+    width:30px;
+
+  }
+
+
+
+  .menu-first{
+    height:5px;
+    width:5px;
+    background-color:white;
+    border-radius: 100%;
+    z-index: 200;
+    transition: all 1s;
+  }
+
+  .menu-second{
+    height:5px;
+    width:5px;
+    background-color:white;
+    border-radius: 100%;
+    z-index: 199;
+    transition: all .3s;
+  }
+
+  .menu-third{
+    height:5px;
+    width:5px;
+    background-color:white;
+    border-radius: 100%;
+    z-index: 200;
+    transition: all 1s;
+  }
+
+  .header-menubox:hover > .header-menu-dot > .menu-first{
+    display:none;
+  }
+
+  .header-menubox:hover > .header-menu-dot > .menu-third{
+    display:none;
+  }
+
+  .header-menubox:hover > .header-menu-dot > .menu-second{
+    width:25px;
+    height:25px;
+    border-radius: 100%;
+  }
+
+  .scale{
+    scale:1000;
+    background-color:#0d0d0d;
+    transition:
+    scale 1s ease-in-out,
+    background-color 1.5s;
+    
+  }
+
+.menuSelector{
+  color:white;
+  position:absolute;
+  display:flex;
+  position:fixed;
+  opacity:0;
+  top:-100%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  z-index: 200;
+}
+
+.opacity{
+  top:45%;
+  opacity:100;
+  transition: 
+  top .1s, 
+  opacity 2s ease-in-out;
+}
+
+.menuSelectorWrapper{
+  display:none;
+  flex-direction: column;
+  font-family: "aktiv-grotesk", sans-serif;
+  font-weight:700;
+  justify-content: center;
+  align-items: start;
+  margin-top:5vh;
+  font-size:3.5rem;
+  z-index: 100;
+}
+
+.menuSelectorWrapper div:hover {
+  text-decoration: underline;
+  font-size:4rem;
+  transition:
+  all 0s,
+  font-size .5s;
+}
+
+
+@media screen and (max-width:480px){
+
+  .menuEn{
+  display:none;
+  }
+  
+  }
+  
+  /* End Header */
+
+
+
+
+/* Main start */
+
+.mainBox{
+  width:100vw;
+  overflow: hidden;
+  font-family:'Noto Sans KR', sans-serif;
+  font-size:1rem;
+  font-weight:300;
+  color:white;
+
+}
+
+.area-1{
+  display:flex;
+  width:100vw;
+  height:100vh;
+
+}
+
+.area-1 > .video-container{
+  display:flex;
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  
+}
+
+.area-1 > .video-container > video{
+  position:absolute;
+  width:100vw;
+  
+}
+
+.area-1 > .text-container{
+  display:flex;
+  position:absolute;
+  align-items: center;
+  justify-content: center;
+  width:100vw;
+  height:100vh;
+
+  font-size:4rem;
+  z-index:3;
+
+  opacity: 100;
+
+}
+
+
+.area-1 > .text-container > div:nth-of-type(1){
+  font-style:italic;
+}
+.area-1 > .text-container > div:nth-of-type(2){
+  font-size:4rem;
+}
+.area-1 > .text-container > div:nth-of-type(3){
+  font-family:'Anton', sans-serif;
+  font-weight:bold;
+  
+}
+
+.area-1 > .cover-container{
+  display:flex;
+  position:absolute;
+  margin-top:40%;
+  width:100vw;
+  height:100px;
+
+
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  
+  font-family:'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight:500;
+
+  
+}
+
+
+.area-1 > .cover-container div{
+  width:150px;
+  height:70px;
+
+  
+}
+
+.area-1 > .participants div{
+  margin-top:3px;
+  font-weight:200;
+  
+}
+
+
+@media screen and (max-width:480px){
+
+  
+
+  .area-1 > .video-container{
+    width:100%;
+    box-sizing: border-box;
+  }
+  .area-1 > .video-container > video{
+    position:relative;
+    object-fit: cover;
+    
+  }
+
+  .area-1 > .text-container > div:nth-of-type(1){
+    font-size:1.5rem;
+  }
+  .area-1 > .text-container > div:nth-of-type(2){
+    font-size:1.5rem;
+  }
+  .area-1 > .text-container > div:nth-of-type(3){
+    font-size:1.5rem;
+  }
+
+  .area-1 > .cover-container{
+    display:flex;
+    margin-top:85vh;
+    font-weight: 200;
+    font-size: .8rem;
+  }
+
+  .area-1 > .cover-container div{
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    padding:10px;
+    margin-right:20px;
+  }
+
+}
+
+
+
+
+.area-2{
+  display:flex;
+  flex-direction: row;
+  background-color:black;
+  color:white;
+  padding:200px 150px;
+  height:1000px;
+}
+
+.area-2 > div{
+  display:flex;
+  flex-direction: column;
+  height:300px;
+  align-items: start;
+  justify-content: space-around;
+
+  font-family:'Noto Sans KR', sans-serif;
+}
+
+
+.area-2 > div > .overviewTitle{
+font-size: 1.6rem;
+font-weight:600;
+}
+
+
+.area-2 > div > .overviewTeamhhook{
+  display:inline-block;
+  margin-top:50px;
+  
+  font-weight:300;
+  font-size: 1rem;
+  margin-right:3vw;
+}
+
+.area-2 > div > .overviewDotplot{
+  display:inline-block;
+  margin-top:15px;
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:300;
+  font-size: 1rem;
+}
+
+
+
+.area-2 > .overviewSnap{
+  display:flex;
+  position:absolute;
+  left:50%;
+  width:1000px;
+  object-fit: cover;
+  z-index:1;
+  color:white;
+  box-sizing:border-box;
+}
+
+.area-2 > .overviewSnap div{
+  object-fit: cover;
+  width:500px;
+
+}
+
+.area-2 > .overviewSnap div img{
+  position:absolute;
+  width:500px;
+}
+
+
+.area-2 > .overviewSnap > div:nth-child(1) > .hhookPhoto1{
+  top: -100px;
+}
+
+.area-2 > .overviewSnap > div:nth-child(2) > .hhookPhoto2{
+  top:200px;
+  left:300px;
+}
+
+.area-2 > .overviewSnap > div:nth-child(3) > .hhookPhoto3{
+  width:350px;
+  top:500px;
+  left:80px;
+}
+
+
+@media screen and (max-width: 480px){
+  .area-2{
+    display:flex;
+    flex-direction: column;
+    padding: 150px 25px;
+    height:1500px;
+    
+  }
+
+  .area-2 > div > .overviewTitle{
+    font-size: 1.2rem;
+  }
+
+  .area-2 > div > .overviewTeamhhook{
+    width:80vw;
+    font-size:.8rem;
+    white-space: normal;
+    text-align: justify;
+  }
+
+  .area-2 > div > .overviewTeamhhook br{
+    display:none;
+  }
+
+  .area-2 > div > .overviewDotplot{
+    white-space: normal;
+    display:inline-block;
+    width:80vw;
+    margin-top:15px;
+    font-family:'Noto Sans KR', sans-serif;
+    font-weight:300;
+    font-size: .8rem;
+
+    text-align: justify;
+  }
+  
+  .area-2 > div > .overviewDotplot br{
+    display:none;
+  }
+  
+  .area-2 > .overviewSnap{
+    display:flex;
+    width:100%;
+    height:100%;
+    flex-direction: column;
+    position:relative;
+    left:0;
+    
+    color:white;
+
+    object-fit: cover;
+    
+    box-sizing:border-box;
+    z-index:1;
+
+    margin-top: 100px;
+
+  }
+  
+  .area-2 > .overviewSnap div{
+    width:100%;
+    margin:5px 0;
+    
+    
+  }
+  
+  .area-2 > .overviewSnap div img{
+    position:absolute;
+    width:100%;
+  }
+  
+  
+  .area-2 > .overviewSnap > div:nth-child(1) > .hhookPhoto1{
+    position:relative;
+    top: 0;
+  }
+  
+  .area-2 > .overviewSnap > div:nth-child(2) > .hhookPhoto2{
+    position:relative;
+    top:0;
+    left:0;
+  }
+  
+  .area-2 > .overviewSnap > div:nth-child(3) > .hhookPhoto3{
+    position:relative;
+    width:100%;
+    top:0;
+    left:0;
+  }
+}
+
+
+.area-3{
+  display:flex;
+  position:relative;
+  height: 1500px;
+
+  flex-direction: column;
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.56)), url('/assets/img/design/hhook/Alli.webp');
+  background-size: cover;
+
+  color:white;
+  padding:200px 150px;
+  font-family:'Noto Sans KR', sans-serif;
+  
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+
+.area-3 > div{
+  display:flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.area-3 > div > .problem{
+  margin-top:200px;
+  font-family:'Noto Sans KR', sans-serif;
+  font-size:1rem;
+  font-weight:300;
+  z-index: 1;
+  
+  
+}
+
+.area-3 > div > .problem > p{
+  font-size:1.2rem;
+
+  font-family: "Noto Serif HK", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+
+.area-3 > div > .problem-2{
+  margin-top:200px;
+  font-family:'Noto Sans KR', sans-serif;
+  font-size:1rem;
+  font-weight:300;
+  z-index: 1;
+  
+}
+
+.area-3 > div > .problem-2 > p{
+  font-size:1.2rem;
+
+  font-family: "Noto Serif HK", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+
+.area-3 > div div{
+  
+  z-index: 1;
+}
+
+
+
+@media screen and (max-width:480px){
+  .area-3{
+    display:flex;
+    position:relative;
+    height: 1000px;
+  
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.56)), url('/assets/img/design/hhook/Alli.webp');
+    background-size: cover;
+    background-position-x: -400px;
+  
+    color:white;
+    padding:150px 25px;
+    font-family:'Noto Sans KR', sans-serif;
+    
+    box-sizing: border-box;
+    overflow: hidden;
+  
+  }
+  
+  
+  .area-3 > div{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+  
+  }
+  
+  .area-3 > div > .problem{
+    font-size:.8rem;
+    white-space: normal;
+  }
+  
+ 
+  
+  
+  .area-3 > div > .problem-2{
+    font-size:.8rem;
+    white-space: normal;
+  }
+  
+
+
+
+}
+
+
+
+.area-4{
+  display:flex;
+  flex-direction: column;
+  padding:200px 150px;
+}
+
+.area-4 > .identity > .idTitle{
+  font-size:1.6rem;
+  font-weight:600;
+}
+
+.area-4 > .identity > .idBody{
+  margin:75px 0;
+}
+
+.area-4 > .idImgCon{
+  height:100vh;
+  display:Flex;
+  align-self: center;
+  margin-top:150px;
+  
+}
+
+.area-4 > .idImgCon div{
+  overflow: hidden;
+}
+
+.area-4 > .idImgCon div img{
+  width: calc(100vw/3);
+}
+
+
+
+
+@media screen and (max-width:480px){
+  .area-4{
+    display:flex;
+    flex-direction: column;
+    padding:150px 25px;
+  }
+  
+  .area-4 > .identity > .idTitle{
+    font-size:1.2rem;
+    font-weight:600;
+  }
+  
+  .area-4 > .identity > .idBody{
+    font-size:.8rem;
+    white-space: normal;
+  }
+  
+  .area-4 > .identity > .idBody br:not(:nth-child(n+2):nth-child(-n+3)){
+    display:none;
+  }
+
+  .area-4 > .idImgCon{
+    height:240vh;
+    display:Flex;
+    flex-direction: column;
+    align-self: center;
+    margin:0;
+    padding:0;
+  }
+  
+  .area-4 > .idImgCon div{
+    overflow: hidden;
+  }
+  
+  .area-4 > .idImgCon div img{
+    width: 90vw;
+    margin:5px;
+  }
+  
+  .area-4> .dImgCon div{
+  width:100%;
+  height:100%;
+    
+  }
+}
+
+
+.area-5{
+  display:flex;
+  flex-direction:column;
+
+  background-color:black;
+  width:100vw;
+  padding:200px 150px;
+
+  font-size: 18px;
+  font-weight: 500;
+  color:white;
+}
+
+.area-5 > .logoHead{
+  font-weight:400;
+}
+
+.area-5 > .visualTitle{
+  font-size:1.6rem;
+  font-weight:600;
+  margin-bottom: 75px;
+}
+
+
+.area-5 > .logoExpl{
+  font-size:16px;
+  font-weight:300;
+  text-align: end;
+
+  margin-top:-30px;
+}
+
+.area-5 > .logoType{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100vw - 300px);
+  overflow: hidden;
+}
+
+
+.area-5 > .logoType > img{
+  width:100%;
+  margin-bottom:100px;
+}
+
+.area-5 > .fontHead{
+  font-weight:400;
+}
+
+.area-5 > .mainFont{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  margin-top:200px;
+  margin-bottom:200px;
+
+  overflow:hidden;
+}
+
+.area-5 > .fontExpl{
+  font-size:16px;
+  font-weight:300;
+  text-align: end;
+
+  margin-top:-30px;
+}
+.area-5 > .mainFont div{
+  display:flex;
+  justify-content:center;
+}
+
+.area-5 > .mainFont img{
+  width:90%;
+
+}
+
+.area-5 > .colorExpl{
+  font-size:16px;
+  font-weight:300;
+  text-align: end;
+
+  margin-top:-30px;
+}
+
+.area-5 > .colorHead{
+  font-weight:400;
+}
+
+.area-5 > .brandColor{
+  margin-top:200px;
+  display:flex;
+  width:100vw;
+}
+
+.area-5 > .brandColor > div:first-child{
+  display:flex;
+  flex-direction: column;
+
+  width:60%;
+  height:150px;
+  border-radius: 5px;
+
+  font-size:15px;
+  font-weight: 300;
+  padding: 10px 25px;
+  line-height: 0;
+
+  background-color: #A90F29;
+}
+
+.area-5 > .brandColor > div:last-child{
+  display:flex;
+  flex-direction: column;
+
+  width:60%;
+  height:150px;
+  border-radius: 5px;
+
+  font-size:15px;
+  font-weight: 300;
+  padding: 10px 25px;
+  line-height: 0;
+
+
+  background-color: #080506;
+}
+
+
+@media screen and (max-width:480px){
+  .area-5{
+    display:flex;
+    width:100vw;
+    height:100%;
+    flex-direction: column;
+    padding:100px 25px;
+  
+    font-size: 1rem;
+    font-weight: 600;
+
+  }
+  
+  .area-5 > .visualTitle{
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom: 75px;
+  }
+
+  .area-5 > .logoHead{
+    font-weight:400;
+    white-space: normal;
+  }
+  
+  
+  .area-5 > .logoExpl{
+    font-size:.8rem;
+    font-weight:300;
+    white-space: normal;
+    margin-top:20px;
+    text-align: justify;
+  }
+
+  .area-5 > .logoExpl br{
+    display:none;
+  }
+  
+  .area-5 > .logoType{
+    display:flex;
+    margin: 0 auto;
+  
+    width: 80vw;
+    overflow: hidden;
+  }
+  
+  
+  .area-5 > .logoType > img{
+    width:100%;
+    margin:50px 0;
+  }
+  
+  .area-5 > .fontHead{
+    font-weight:400;
+    margin-bottom:20px; 
+  }
+  
+  .area-5 > .mainFont{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    margin:50px 0;
+  
+    overflow:hidden;
+  }
+  
+  .area-5 > .fontExpl{
+    font-size:.8rem;
+    font-weight:300;
+    text-align: justify;
+    white-space: normal;
+  
+    margin-top:0px;
+  }
+
+  .area-5 > .fontExpl br{
+    display: none;
+  }
+  
+
+  .area-5 > .mainFont img{
+    width: 100vw;
+    overflow: hidden;
+  
+  }
+  
+  .area-5 > .colorExpl{
+    font-size:.8rem;
+    font-weight:300;
+    text-align: justify;
+    white-space: normal;
+  
+    margin-top:20px;
+  }
+  
+  .area-5 > .colorHead{
+    font-weight:400;
+  }
+  
+  .area-5 > .brandColor{
+    margin:100px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100vw;
+  }
+  
+  .area-5 > .brandColor > div:first-child{
+    display:flex;
+  
+    width:85%;
+    height:150px;
+    border-radius: 5px;
+  
+    font-size:0.8rem;
+    font-weight: 300;
+    padding: 10px 25px;
+  
+    background-color: #A90F29;
+  }
+  
+  .area-5 > .brandColor > div:last-child{
+    display:flex;
+  
+    width:80%;
+    height:150px;
+    border-radius: 5px;
+  
+    font-size:0.8rem;
+    font-weight: 300;
+    padding: 10px 25px;
+  
+    background-color: #080506;
+
+    margin-bottom:-100px;
+  }
+
+}
+
+
+
+.area-6{
+  display:flex;
+  flex-direction:column;
+  padding: 200px 150px;
+}
+
+.area-6 > .visualTitle{
+  font-size:1.6rem;
+  font-weight:600;
+}
+
+.area-6 > .applicationBox{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.area-6 > .applicationBox > .appTitle{
+  margin-top: 100px;
+  font-weight:400;
+  
+}
+
+.area-6 > .applicationBox > .appExpl{
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.area-6 > .signBox{
+  position:absolute;
+  margin:0 -150px;
+  width:100%;
+  height:110%;
+  z-index:-1;
+
+  overflow: hidden;
+}
+
+.area-6 > .signBox > .imgGradientBox{
+  position:absolute;
+  width:100%;
+  height:100%;
+
+  background: 
+  linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1));
+  z-index:1;
+}
+
+
+
+.area-6 > .signBox > img{
+  width:100vw;
+  transform: translateY(-10%);
+}
+
+
+.area-6 > .appImgBox{
+  display:flex;
+  flex-direction: column;
+  width:100vw;
+  margin:100px -150px;
+
+}
+
+.area-6 > .appImgBox > .poster img{
+  width:50%;
+}
+
+.area-6 > .appImgBox > .tshirt{
+  width:100%;
+  margin-top:-300px;
+  margin-left: -100px;
+}
+
+.area-6 > .appImgBox > .tshirt > img{
+  widtH:100%;
+}
+
+.area-6 > .appImgBox > .namecard{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  margin-top:-55vh;
+  margin-left: 65vw;
+}
+
+.area-6 > .appImgBox > .namecard > img{
+  width:25%;
+  margin:10px;
+}
+
+.area-6 > .appImgBox > .namecard > img:first-child{
+  margin-left:-150px;
+}
+
+.area-6 > .appImgBox > .patch{
+  width:100%;
+}
+
+.area-6 > .appImgBox > .patch > img{
+  width:40%;
+  margin-left: 15vw;
+  margin-top: -50vh;
+}
+
+
+@media screen and (max-width:480px){
+  .area-6{
+    width:100%;
+    height:420vh;
+    display:flex;
+    flex-direction:column;
+    padding: 100px 25px;
+
+    box-sizing: border-box;
+  }
+  
+  .area-6 > .visualTitle{
+    font-size:1.2rem;
+    font-weight:600;
+  }
+  
+  .area-6 > .applicationBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .area-6 > .applicationBox > .appTitle{
+    margin-top: 100px;
+    font-weight: 400;
+    
+  }
+  
+  .area-6 > .applicationBox > .appExpl{
+    margin-top: 50px;
+
+    font-size:0.8rem;
+    text-align: justify;
+
+    white-space: normal;
+  }
+  
+  .area-6 > .applicationBox > .appExpl br{
+    display:none;
+  }
+
+
+  .area-6 > .signBox{
+    position:absolute;
+    margin:-50px;
+    width:100%;
+    z-index:-1;
+  
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .area-6 > .signBox > .imgGradientBox{
+    position:absolute;
+    width:100%;
+    height:100%;
+  
+    background: 
+    linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1));
+    z-index:1;
+  }
+  
+  
+  
+  .area-6 > .signBox > img{
+    object-fit: cover;
+    scale: 1.4;
+    transform: translateY(0);
+  }
+  
+  
+  .area-6 > .appImgBox{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    margin:0;
+    padding:0;
+    margin:50px 0px;
+  
+  }
+
+  .area-6 > .appImgBox > .poster{
+    display:flex;
+    flex-direction: column;
+    margin-top:50px;
+  }
+
+  .area-6 > .appImgBox > .poster img{
+    width:100%;
+    scale:1.4;
+    margin:50px 0;
+  }
+  
+  .area-6 > .appImgBox > .tshirt{
+    width:100%;
+    margin:75px 0;
+    overflow:hidden;
+    margin-bottom:0px;
+  }
+  
+  .area-6 > .appImgBox > .tshirt > img{
+    width:100%;
+    scale:1.5;
+    object-fit: cover;
+  }
+  
+  .area-6 > .appImgBox > .namecard{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    width:100%;
+    margin:75px 0;
+  }
+  
+  .area-6 > .appImgBox > .namecard > img{
+    width:70%;
+    margin:10px;
+
+  }
+  
+  .area-6 > .appImgBox > .namecard > img:first-child{
+    margin:10px;
+  }
+  
+  .area-6 > .appImgBox > .patch{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    margin: 100px 0;
+  }
+  
+  .area-6 > .appImgBox > .patch > img{
+    width:100%;
+    margin:100px 0px;
+    scale: 2;
+  }
+
+}
+
+/* Main end */
+
+
+.displayFlex{
+  display:flex;
+}
+
+
+/* Footer start*/
+.footer{
+  bottom:0;  
+}
+
+.footer-infBox{
+  margin-bottom:3vh;
+  margin-left:calc(2vw + 10px);
+}
+
+.footer > .footer-infBox > .co-inf{
+  font-family: 'Noto Sans Kr', sans-serif;
+  font-weight: 300;
+  font-size:.6rem;
+  color:white;    
+}
+
+/* Footer end*/

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닷플랏 | DOTPLOT | Let's Make a Plot</title>
+    <link rel="icon" href="/assets/img/DotplotFavicon.webp"/>
+    <meta name="description" content="이야기로 세상을 다채롭게. Let's make a plot.">
+    
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <script src="/assets/js/index.js" defer></script>
+
+    <!-- Pretendard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="DOTPLOT">
+    <meta property="og:image" content="/assets/img/DotplotOpengraph.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dotplot.kr">
+    <meta property="og:description" content="이야기로 세상을 다채롭게. Let's make a plot.">
+    <!-- End opengraph -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N95LQD2');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- ftc -->
+    <script language="JavaScript">
+        function onopen() {
+            var url = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no="+7662401352;
+            window.open(url, "bizCommPop", "width=750, height=700;");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N95LQD2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="/assets/img/Logo.png" alt="DOT. PLOT">
+        </a>
+        <nav class="header-nav">
+            <a href="#about">About</a>
+            <a href="/process">Process</a>
+            <a href="#product">Product</a>
+            <a href="/design">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <button class="header-menu-btn" id="menuBtn" aria-label="메뉴">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#about">About</a>
+            <a href="/process">Process</a>
+            <a href="#product">Product</a>
+            <a href="/design">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <div class="hero-bg">
+                <img src="/assets/img/design/hhook/hhookPhoto1.webp" alt="">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">브랜딩으로 이루고 싶은 게 무엇인지, 먼저 듣습니다.</h1>
+                <div class="hero-desc">
+                    <p>인지도 향상, 제품 확장, 재구매율 향상, 투자 유치 등</p>
+                    <p>브랜딩의 목적과 현재 상태에 따라 시작점은 달라집니다.</p>
+                    <p>지금 필요한 만큼부터 부담 없이 시작하실 수 있도록 진행합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section class="portfolio-section">
+            <div class="portfolio-grid">
+                <a href="/design/hhook" class="portfolio-card">
+                    <div class="portfolio-img"><img src="/assets/img/index/hhookPoster.webp" alt="팀훅"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Logo</span><span>Branding Video</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">팀훅</span>
+                        <span class="portfolio-desc">무술 교육</span>
+                    </div>
+                </a>
+                <a href="/design" class="portfolio-card">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-2.png" alt="한성한우"></div>
+                    <div class="portfolio-tags">
+                        <span>Logo</span><span>Package</span><span>Banner</span><span>Website</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">한성한우</span>
+                        <span class="portfolio-desc">육가공 소매</span>
+                    </div>
+                </a>
+                <a href="/design/cafegeosil" class="portfolio-card">
+                    <div class="portfolio-img"><img src="/assets/img/index/geosilPoster.webp" alt="거실"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Logo</span><span>Menu</span><span>Interior</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">거실</span>
+                        <span class="portfolio-desc">카페</span>
+                    </div>
+                </a>
+                <a href="/design" class="portfolio-card">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-4.png" alt="언택"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Naming</span><span>Logo</span><span>Website</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">언택</span>
+                        <span class="portfolio-desc">패션</span>
+                    </div>
+                </a>
+                <a href="/film" class="portfolio-card">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-5.png" alt="Nroa"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding Video</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">Nroa</span>
+                        <span class="portfolio-desc">향기 리츄얼</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section-services" id="product">
+            <div class="section-services-left">
+                <h2 class="section-title">저희가 어떤 작업을<br>진행하는지 소개해드릴게요.</h2>
+                <div class="services-visual">
+                    <img src="/assets/img/design/hhook/hhookPhoto1.webp" alt="">
+                </div>
+            </div>
+            <div class="section-services-right">
+                <a href="/process" class="service-item">
+                    <div class="service-text">
+                        <span class="service-name">브랜딩 컨설팅</span>
+                        <span class="service-detail">(전반적인 브랜딩 시스템 전략 제안)</span>
+                    </div>
+                    <span class="service-arrow">→</span>
+                </a>
+                <div class="service-divider"></div>
+                <a href="/design" class="service-item">
+                    <div class="service-text">
+                        <span class="service-name">브랜드 디자인</span>
+                        <span class="service-detail">(네이밍/로고/컬러&amp;서체 선정/웹사이트 제작 등)</span>
+                    </div>
+                    <span class="service-arrow">→</span>
+                </a>
+                <div class="service-divider"></div>
+                <a href="/film" class="service-item">
+                    <span class="service-name">브랜디드 필름</span>
+                    <span class="service-arrow">→</span>
+                </a>
+                <div class="service-divider"></div>
+                <a href="/film" class="service-item">
+                    <span class="service-name">콘텐츠 제작</span>
+                    <span class="service-arrow">→</span>
+                </a>
+                <div class="service-divider"></div>
+                <a href="/contact" class="service-item">
+                    <div class="service-text">
+                        <span class="service-name">광고대행</span>
+                        <span class="service-detail">(당근/네이버블로그/인스타그램/포털(구글, 메타 등)</span>
+                    </div>
+                    <span class="service-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Process / CTA -->
+        <section class="section-process">
+            <div class="process-box process-box-left">
+                <h2 class="section-title">고민이 길어진다면<br>함께 이야기 나눠보아요</h2>
+            </div>
+            <div class="process-box process-box-right">
+                <!-- 이미지 영역 -->
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-testimonials">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-top">
+                            <p class="testimonial-text">기획안 자체만으로도 충분한 가치가 있는 작업이었습니다. 전체적인 분석을 통해 저에게 맞는 브랜드다움을 도출해주셔서 정말 만족스러웠습니다.</p>
+                            <p class="testimonial-meta">변호사 | 임호균<br>25.10~26.02</p>
+                        </div>
+                        <div class="testimonial-profile"></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-top">
+                            <p class="testimonial-text">브랜드에 대한 고민은 있었지만 어디서부터 정리해야 할지 막막한 상황에서, 브랜드의 본질을 잘 짚어주시고 방향성과 기준을 명확히 잡아주셔서 큰 도움이 되었습니다.</p>
+                            <p class="testimonial-meta">패션 브랜드 | 언택<br>25.10~</p>
+                        </div>
+                        <div class="testimonial-profile"></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-top">
+                            <p class="testimonial-text">브랜드 분위기에 잘 맞는 로고를 정말 멋지게 만들어주셔서 감사합니다. 팀원들도 모두 만족했고, 다음에도 다시 요청드리고 싶을 만큼 만족스러운 작업이었습니다.</p>
+                            <p class="testimonial-meta">패션 브랜드 | 플래시백<br>23.08~23.08</p>
+                        </div>
+                        <div class="testimonial-profile"></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-top">
+                            <p class="testimonial-text">모르는 부분이 많았는데도 상세하게 설명해주셔서 원활하게 마무리할 수 있었습니다. 덕분에 체육관 분위기도 더 자신감 있고 즐거운 공간이 된 것 같습니다.</p>
+                            <p class="testimonial-meta">주짓수&amp;복싱 체육관 | 팀훅<br>22.07~</p>
+                        </div>
+                        <div class="testimonial-profile"></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-inner">
+                        <div class="testimonial-top">
+                            <p class="testimonial-text">영상 결과물이 정말 마음에 듭니다. 컨셉도 너무 좋았고, 덕분에 만족스러운 결과물이 나왔습니다.</p>
+                            <p class="testimonial-meta">향수 브랜드 | 느로아<br>22.07~22.08</p>
+                        </div>
+                        <div class="testimonial-profile"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="section-products">
+            <div class="products-header">
+                <h2 class="section-title">뭘해야할지 모르겠다면<br>이런 상품도 있어요</h2>
+                <p class="products-desc">저희는 지식과 경험을 바탕으로, 이상적인 방향만 이야기하기보다 브랜드에 실제로 도움이 되는 현실적인 방향을 함께 제시합니다. 아직은 크지 않은 스튜디오이기에, 함께하는 모든 브랜드의 성장을 진심으로 바라며 더 깊이 고민하고 책임감 있게 작업합니다.</p>
+            </div>
+            <div class="products-grid">
+                <a href="/contact" class="product-card">
+                    <div class="product-card-img"><img src="/assets/img/index/consultingPoster.webp" alt="브랜딩 컨설팅"></div>
+                    <span class="product-price">150만원</span>
+                    <div class="product-tags"><span>Package</span></div>
+                    <h3 class="product-card-title">브랜딩 컨설팅</h3>
+                    <p class="product-card-desc">(전반적인 브랜딩 시스템 전략 제안)</p>
+                    <span class="product-card-link">살펴보기</span>
+                </a>
+                <a href="/contact" class="product-card">
+                    <div class="product-card-img"><img src="/assets/img/index/reportPoster.webp" alt="브랜딩 모임"></div>
+                    <span class="product-price">무료</span>
+                    <div class="product-tags"><span>Package</span></div>
+                    <h3 class="product-card-title">브랜딩 모임</h3>
+                    <p class="product-card-desc">(전반적인 브랜딩 시스템 전략 제안)</p>
+                    <span class="product-card-link">살펴보기</span>
+                </a>
+                <a href="/design" class="product-card">
+                    <div class="product-card-img"><img src="/assets/img/design/hhook/hhookLogotype.webp" alt="브랜드 디자인"></div>
+                    <span class="product-price">150만원</span>
+                    <div class="product-tags"><span>Package</span></div>
+                    <h3 class="product-card-title">브랜드 디자인</h3>
+                    <p class="product-card-desc">(전반적인 브랜딩 시스템 전략 제안)</p>
+                    <span class="product-card-link">살펴보기</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright" onclick="onopen();">
+                ⓒ2025. DOTPLOT. all rights reserved.
+            </div>
+            <div class="footer-info">
+                <span>Seoul Jung-gu Sejongdae-ro 19-gil 16</span>
+                <span>070. 8098. 2655.</span>
+                <span>contact@dotplot.kr</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
