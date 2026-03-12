@@ -1,0 +1,287 @@
+/* Portfolio - Figma Design (node 2281:605) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+}
+
+*::selection {
+    background-color: #E8642B;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f8f8f8;
+    color: #0b0b0b;
+    line-height: 1.6;
+}
+
+/* ===== Header (index.html 구조) ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 0 52px;
+    background: #f8f8f8;
+    z-index: 100;
+}
+
+.header-logo {
+    grid-column: 1;
+}
+
+.header-logo img {
+    height: 12px;
+    width: auto;
+}
+
+.header-nav {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.header-nav a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.header-nav a:hover {
+    color: #E8642B;
+}
+
+.header-menu-btn {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* ===== Main ===== */
+.main {
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+/* ===== Portfolio Filters (Figma) ===== */
+.portfolio-filters {
+    display: flex;
+    gap: 20px;
+    padding: 30px 80px 0;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1f1f1f;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #0b0b0b;
+    color: #0b0b0b;
+}
+
+.filter-btn.active {
+    border-color: #0b0b0b;
+    color: #0b0b0b;
+}
+
+/* ===== Portfolio Grid ===== */
+.portfolio-grid-wrap {
+    padding: 60px 80px 80px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 353px);
+    gap: 60px 60px;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio-card.hidden {
+    display: none;
+}
+
+.portfolio-img {
+    height: 528px;
+    overflow: hidden;
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.portfolio-tags span {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 4px 6px;
+    border: 0.554px solid #000;
+    border-radius: 16.629px;
+    background: #fff;
+}
+
+.portfolio-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid #000;
+}
+
+.portfolio-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0b0b0b;
+}
+
+.portfolio-desc {
+    font-size: 22px;
+    font-weight: 500;
+    color: #0b0b0b;
+    text-align: right;
+}
+
+/* ===== Footer ===== */
+.footer {
+    padding: 48px 80px;
+    background: #f5f5f5;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+}
+
+.footer-info {
+    display: flex;
+    gap: 24px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* ===== Mobile Menu ===== */
+@media screen and (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 24px;
+        height: 56px;
+    }
+
+    .header-nav {
+        gap: 24px;
+    }
+
+    .header-nav a {
+        font-size: 14px;
+    }
+
+    .header-menu-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .main {
+        padding-top: 56px;
+    }
+
+    .portfolio-filters {
+        padding: 24px 24px 0;
+        gap: 12px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .portfolio-grid-wrap {
+        padding: 40px 24px 60px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .portfolio-img {
+        height: 360px;
+    }
+
+    .portfolio-name {
+        font-size: 20px;
+    }
+
+    .portfolio-desc {
+        font-size: 18px;
+    }
+}

@@ -566,6 +566,14 @@ body {
         font-size: 14px;
     }
 
+    .header-menu-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
     .main {
         padding-top: 56px;
     }

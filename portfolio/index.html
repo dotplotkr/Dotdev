@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닷플랏 | Portfolio | Let's Make a Plot</title>
+    <link rel="icon" href="/assets/img/DotplotFavicon.webp"/>
+    <meta name="description" content="이야기로 세상을 다채롭게. Let's make a plot.">
+    
+    <link rel="stylesheet" href="/assets/css/portfolio.css"/>
+    <script src="/assets/js/portfolio.js" defer></script>
+
+    <!-- Pretendard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="DOTPLOT | Portfolio">
+    <meta property="og:image" content="/assets/img/DotplotOpengraph.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dotplot.kr/portfolio">
+    <meta property="og:description" content="이야기로 세상을 다채롭게. Let's make a plot.">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N95LQD2');</script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- ftc -->
+    <script language="JavaScript">
+        function onopen() {
+            var url = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no="+7662401352;
+            window.open(url, "bizCommPop", "width=750, height=700;");
+        }
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N95LQD2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header (index.html 구조) -->
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="/assets/img/Logo.png" alt="DOT. PLOT">
+        </a>
+        <nav class="header-nav">
+            <a href="/#about">About</a>
+            <a href="/process">Process</a>
+            <a href="/#product">Product</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <button class="header-menu-btn" id="menuBtn" aria-label="메뉴">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="/#about">About</a>
+            <a href="/process">Process</a>
+            <a href="/#product">Product</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Category Filters -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="gym">GYM</button>
+            <button class="filter-btn" data-filter="cafe">Cafe</button>
+            <button class="filter-btn" data-filter="fashion">Fashion</button>
+            <button class="filter-btn" data-filter="lawyer">Lawyer</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid-wrap">
+            <div class="portfolio-grid">
+                <a href="/design/hhook" class="portfolio-card" data-category="gym">
+                    <div class="portfolio-img"><img src="/assets/img/index/hhookPoster.webp" alt="팀훅"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Logo</span><span>Branding Video</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">팀훅</span>
+                        <span class="portfolio-desc">주짓수&amp;복싱 체육관</span>
+                    </div>
+                </a>
+                <a href="/design" class="portfolio-card" data-category="retail">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-2.png" alt="한성한우"></div>
+                    <div class="portfolio-tags">
+                        <span>Logo</span><span>Package</span><span>Banner</span><span>Website</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">한성한우</span>
+                        <span class="portfolio-desc">온&amp;오프라인 한우 유통</span>
+                    </div>
+                </a>
+                <a href="/design/cafegeosil" class="portfolio-card" data-category="cafe">
+                    <div class="portfolio-img"><img src="/assets/img/index/geosilPoster.webp" alt="거실"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Logo</span><span>Menu</span><span>Interior</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">거실</span>
+                        <span class="portfolio-desc">카페</span>
+                    </div>
+                </a>
+                <a href="/design" class="portfolio-card" data-category="fashion">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-4.png" alt="언택"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding</span><span>Naming</span><span>Logo</span><span>Website</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">언택</span>
+                        <span class="portfolio-desc">패션</span>
+                    </div>
+                </a>
+                <a href="/contact" class="portfolio-card" data-category="fashion">
+                    <div class="portfolio-img"><img src="/assets/img/index/main-pf-5.png" alt="Nroa"></div>
+                    <div class="portfolio-tags">
+                        <span>Branding Video</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-name">Nroa</span>
+                        <span class="portfolio-desc">향기 리츄얼</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright" onclick="onopen();">
+                ⓒ2025. DOTPLOT. all rights reserved.
+            </div>
+            <div class="footer-info">
+                <span>Seoul Jung-gu Sejongdae-ro 19-gil 16</span>
+                <span>070. 8098. 2655.</span>
+                <span>contact@dotplot.kr</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
