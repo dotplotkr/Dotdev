@@ -8,7 +8,12 @@
     <link rel="icon" href="/assets/img/DotplotFavicon.webp"/>
     <meta name="description" content="이야기로 세상을 다채롭게. Let's make a plot.">
     
+    <link rel="stylesheet" href="/assets/css/header.css"/>
+    <link rel="stylesheet" href="/assets/css/loader.css"/>
+    <link rel="stylesheet" href="/assets/css/locomotive.css"/>
     <link rel="stylesheet" href="/assets/css/portfolio.css"/>
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/locomotive.js" defer></script>
     <script src="/assets/js/portfolio.js" defer></script>
 
     <!-- Pretendard -->
@@ -33,6 +38,12 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
+    <!-- imagesloaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- locomotive scroll -->
+    <script src="/assets/js/locomotive-scroll.min.js"></script>
+
     <!-- ftc -->
     <script language="JavaScript">
         function onopen() {
@@ -46,7 +57,18 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N95LQD2"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Header (index.html 구조) -->
+    <!-- Loader -->
+    <div class="progress progress-images" id="progress">
+        <div class="loader-face">
+            <div class="loader-dots">
+                <span class="loader-dot"></span>
+                <span class="loader-dot"></span>
+            </div>
+            <span class="progress-bar"></span>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <a href="/" class="header-logo">
             <img src="/assets/img/Logo.png" alt="DOT. PLOT">
@@ -75,6 +97,7 @@
     </div>
 
     <!-- Main -->
+    <div class="scroll-container" data-scroll-container>
     <main class="main">
         <!-- Category Filters -->
         <div class="portfolio-filters">
@@ -118,7 +141,7 @@
                         <span class="portfolio-desc">카페</span>
                     </div>
                 </a>
-                <a href="/design" class="portfolio-card" data-category="fashion">
+                <a href="/portfolio/untag" class="portfolio-card" data-category="fashion">
                     <div class="portfolio-img"><img src="/assets/img/index/main-pf-4.png" alt="언택"></div>
                     <div class="portfolio-tags">
                         <span>Branding</span><span>Naming</span><span>Logo</span><span>Website</span>
@@ -142,7 +165,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-copyright" onclick="onopen();">
@@ -155,5 +177,6 @@
             </div>
         </div>
     </footer>
+    </div>
 </body>
 </html>

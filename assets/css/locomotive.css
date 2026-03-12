@@ -1,0 +1,12 @@
+/* Locomotive Scroll - smooth scroll (index.html main 전용) */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}

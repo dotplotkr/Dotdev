@@ -26,13 +26,6 @@ $('.cursor-big').mouseleave(function(){
 
 //End Cursor
 
-
-(function () {
-  const locomotiveScroll = new LocomotiveScroll();
-})();
-
-
-
 //Loader
 var $container = $('#progress'),
 $progressBar = $container.find('.progress-bar'),
@@ -60,9 +53,11 @@ function updateProgress(){
 
   if(target == 100){
     clearInterval(progressTimer);
-    $progressBar.delay(500).animate({opacity:100}, 250, function(){
-    $container.animate({left:'-100%', opacity:'0'}, 300);
-      });
+    $container.delay(500).addClass('hidden');
+    setTimeout(function(){
+      $container.css('display','none');
+      if (window.locomotiveScroll && window.locomotiveScroll.update) window.locomotiveScroll.update();
+    }, 800);
   }
 };
 //$progressBar.add($progressText).delay(500).animate
@@ -120,6 +115,13 @@ function parallax(e){
 
       conCard.setAttribute('id','contact-card-container')
       
+    })
+
+    // 외부(박스 밖) 클릭 시 닫기
+    $('.contact-card-container').on('click', function(e) {
+      if (conCard.id === 'displayFlex' && !$(e.target).closest('.contact-card-box').length) {
+        conCard.setAttribute('id', 'contact-card-container');
+      }
     })
 
     gsap.from('.coLetter', {

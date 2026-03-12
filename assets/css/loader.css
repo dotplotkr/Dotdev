@@ -1,0 +1,91 @@
+/* Loader - 공통 (화면 중앙, 배경 #f8f8f8, 글자 #0b0b0b) */
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #f8f8f8;
+    color: #0b0b0b;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.progress.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 로더: . .  + 선 */
+.loader-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.loader-dots {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.loader-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0b0b0b;
+}
+
+.loader-face .progress-bar {
+    width: 90px;
+    height: 3px;
+    background-color: #E8642B;
+    overflow: hidden;
+}
+
+.progress-text {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0b0b0b;
+}
+
+.progress-bar {
+    display: block;
+    width: 190px;
+    height: 3px;
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+
+/* index, portfolio: 무한 로딩 애니메이션 */
+.progress:not(.progress-images) .progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 60px;
+    background-color: #E8642B;
+    animation: loader-bar 1.2s ease-in-out infinite;
+}
+
+@keyframes loader-bar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(240px); }
+}
+
+/* design, contact, process, hhook, cafegeosil: imagesLoaded로 width 설정 */
+.progress.progress-images .loader-face .progress-bar {
+    width: 90px;
+    background-color: #E8642B;
+}
+
+.progress.progress-images .progress-bar::after {
+    display: none;
+}

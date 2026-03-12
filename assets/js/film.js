@@ -58,10 +58,6 @@ imgLoad.on('progress', function(){
 });
 
 
-(function () {
-  const locomotiveScroll = new LocomotiveScroll();
-})();
-
 function updateProgress(){
   var target = (imgLoaded/imgTotal) * 100;
   $progressBar.css({width:target + 90 +'px'});
