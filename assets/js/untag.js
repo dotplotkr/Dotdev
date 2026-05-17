@@ -120,7 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!src && !images) {
             placeholder.style.display = 'flex';
-            placeholder.querySelector('img').src = '/assets/img/index/main-pf-4.png';
+            var phImg = placeholder.querySelector('img');
+            var phFallback = placeholder.getAttribute('data-placeholder-src') || '/assets/img/index/main-pf-4.png';
+            if (phImg) phImg.src = phFallback;
             return;
         }
 

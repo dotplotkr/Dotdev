@@ -80,7 +80,7 @@
     100% { transform: translateX(240px); }
 }
 
-/* design, contact, process, hhook, cafegeosil: imagesLoaded로 width 설정 */
+/* design, contact, process, hhook, geosil: imagesLoaded로 width 설정 */
 .progress.progress-images .loader-face .progress-bar {
     width: 90px;
     background-color: #E8642B;
